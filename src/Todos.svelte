@@ -1,9 +1,9 @@
-<!-- Types -->
+<!-- //// Types //// -->
 <script lang="ts" context="module">
   import type { ITodo } from './Todo.svelte'
 </script>
 
-<!-- Logic -->
+<!--  //// Logic  //// -->
 <script lang="ts">
   import Todo from './Todo.svelte'
   import { onMount } from 'svelte'
@@ -57,8 +57,7 @@
   onMount(getTodos)
 </script>
 
-<!-- Markup -->
-
+<!-- //// Markup  //// -->
 {#if todos}
   <button on:click={add}>Add todo</button>
   {#if todos.length === 0}
@@ -72,7 +71,7 @@
   {/if}
 {/if}
 
-<!-- Styles -->
+<!--  //// Styles  //// -->
 <style>
   ul {
     padding: 0;

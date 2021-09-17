@@ -1,3 +1,4 @@
+<!-- //// Types //// -->
 <script lang="ts" context="module">
   export type ITodo = {
     id: number
@@ -7,14 +8,14 @@
   type DispatchActions = Record<'remove' | 'toggle' | 'edit', { todo: ITodo }>
 </script>
 
+<!-- //// Logic //// -->
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher<DispatchActions>()
   export let todo: ITodo
 </script>
 
-<!-- Markup -->
-
+<!-- //// Markup //// -->
 <li class:completed={todo.completed}>
   <div>
     <input
@@ -30,7 +31,7 @@
   </div>
 </li>
 
-<!-- Styles -->
+<!-- //// Styles //// -->
 <style>
   div {
     display: inherit;
