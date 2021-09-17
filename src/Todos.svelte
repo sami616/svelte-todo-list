@@ -23,7 +23,7 @@
     todos = [...todos, { id: Math.random(), title: newTodo, completed: false }]
   }
 
-  // Handle removing a todo title
+  // Handle removing a todo
   function remove(event: CustomEvent<{ todo: ITodo }>) {
     if (!todos) return
     todos = todos.filter(curr => event.detail.todo.id !== curr.id)
